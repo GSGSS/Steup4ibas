@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF2A331E-DFD1-4D0F-9C7E-DA2DEDFC5D29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Install4ibas.UI</RootNamespace>
+    <AssemblyName>Install4ibas.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BTulz.ModelsTransformer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Install4ibas.Tools\Dlls\BTulz.ModelsTransformer.dll</HintPath>
+    </Reference>
+    <Reference Include="BTulz.ModelsTransformer.B1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Install4ibas.Tools\Dlls\BTulz.ModelsTransformer.B1.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SAPbobsCOM">
+      <HintPath>..\Install4ibas.Tools\Dlls\B1\9.0\x86\Interop.SAPbobsCOM.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SAPbouiCOM">
+      <HintPath>..\Install4ibas.Tools\Dlls\B1\9.0\x86\Interop.SAPbouiCOM.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonsVisibleStyle.cs" />
+    <Compile Include="FormControl\ControlTypes.cs" />
+    <Compile Include="FormControl\EditConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\EditConfigControl.Designer.cs">
+      <DependentUpon>EditConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControl\FinishControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\FinishControl.Designer.cs">
+      <DependentUpon>FinishControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControl\InstallationOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\InstallationOptionsControl.Designer.cs">
+      <DependentUpon>InstallationOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControl\InstallationProgressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\InstallationProgressControl.Designer.cs">
+      <DependentUpon>InstallationProgressControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControl\LicenseCreateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\LicenseCreateControl.Designer.cs">
+      <DependentUpon>LicenseCreateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IUIAction.cs" />
+    <Compile Include="FormControl\LicenseAcceptControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\LicenseAcceptControl.Designer.cs">
+      <DependentUpon>LicenseAcceptControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControl\ModulesChooseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\ModulesChooseControl.Designer.cs">
+      <DependentUpon>ModulesChooseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControl\ChildControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShellControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShellControl.Designer.cs">
+      <DependentUpon>ShellControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControl\WelcomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControl\WelcomeControl.Designer.cs">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormControl\ChildControl.resx">
+      <DependentUpon>ChildControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\EditConfigControl.resx">
+      <DependentUpon>EditConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\FinishControl.resx">
+      <DependentUpon>FinishControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\InstallationOptionsControl.resx">
+      <DependentUpon>InstallationOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\InstallationProgressControl.resx">
+      <DependentUpon>InstallationProgressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\LicenseAcceptControl.resx">
+      <DependentUpon>LicenseAcceptControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\LicenseCreateControl.resx">
+      <DependentUpon>LicenseCreateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\ModulesChooseControl.resx">
+      <DependentUpon>ModulesChooseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShellControl.resx">
+      <DependentUpon>ShellControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControl\WelcomeControl.resx">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Install4ibas.Tools\Install4ibas.Tools.csproj">
+      <Project>{0c4e7178-9566-4898-8bcb-cbf4ff4193a0}</Project>
+      <Name>Install4ibas.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
